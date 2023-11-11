@@ -1,0 +1,23 @@
+body {
+  background-color: #ffeeb2;
+}
+.container {
+  height: 100vh;
+  background: linear-gradient(135deg, #2d3266, #343d99, #3140cc, #5766ff);
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header_title {
+  width: 110px;
+  font-size: 10px;
+  text-align: right;
+  border: 2px solid #ffeeb2;
+  border-radius: 50px 0 0 50px;
+  border: 2px solid #ffeeb2;
+  background: #ffeeb2;
+  padding: 0 20px;
+  margin-right: 20px;
+}
