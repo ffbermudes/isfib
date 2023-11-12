@@ -1,32 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap");
+
+:root {
+  /* palette of colors */
+  --color-base-1: #2d3266;
+  --color-base-2: #343d99;
+  --color-base-3: #3140cc;
+  --color-base-4: #5766ff;
+  --color-primary: #ffeeb2;
+  --color-gray-1: #807b6c;
+  --color-gray-2: #666357;
+  --color-gray-4: #33312b;
+  --color-white: #fff9e5;
+  --color-white-3: #ffeeb2;
+
+  /* typography */
+  --font-primary: "Nunito Sans", sans-serif;
+}
+* {
+  font-family: var(--font-primary);
+  font-size: 16px;
+}
 body {
-  background-color: #ffeeb2;
+  background-color: var(--color-primary);
 }
 .container {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   width: 90%;
   margin: 5% auto;
   border-radius: 40px;
-  background: linear-gradient(135deg, #2d3266, #343d99, #3140cc, #5766ff);
+  background: linear-gradient(
+    135deg,
+    var(--color-base-1),
+    var(--color-base-2),
+    var(--color-base-3),
+    var(--color-base-4)
+  );
 }
 header {
+  flex: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 45px;
+  padding: 10% 5% 0 5%;
 }
-.header_title {
-  width: 110px;
-  font-size: 10px;
-  line-height: 18px;
+.header_box_title {
   text-align: right;
   border-radius: 50px 0 0 50px;
-  background: #ffeeb2;
-  padding: 0px 30px;
+  background: var(--color-primary);
+  padding: 12px 3.9%;
   margin-right: 20px;
 }
-.header_img {
+.header_box_title h1 {
+  font-size: 100%;
+  line-height: 18px;
+}
+.header_box_img {
   border-radius: 0 50px 50px 0;
-  background: #33312b;
-  padding: 8px 20px;
+  background: var(--color-gray-4);
   margin-left: -20px;
+}
+.header_box_img img {
+  width: 85%;
+  padding: 5% 0 0 5%;
+}
+main {
+  flex: 80%;
+}
+.footer_box_btn {
+  flex: 50%;
+  display: flex;
+  flex-direction: row;
+}
+.footer_box_btn_title_edital {
+  flex: 50%;
+  background: #ffeeb2;
+}
+.footer_box_btn_img {
+  flex: 50%;
+  background: #5766ff;
+}
+.footer_box_btn_action {
+  height: 100px;
+  background: #807b6c;
 }
