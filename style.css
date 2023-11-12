@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800&display=swap");
 
 :root {
   /* palette of colors */
@@ -20,16 +20,10 @@
   font-family: var(--font-primary);
   font-size: 16px;
 }
-body {
+.container-fluid {
   background-color: var(--color-primary);
 }
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 90%;
-  margin: 5% auto;
-  border-radius: 40px;
+.style_container {
   background: linear-gradient(
     135deg,
     var(--color-base-1),
@@ -37,51 +31,18 @@ body {
     var(--color-base-3),
     var(--color-base-4)
   );
+  height: 100vh;
 }
-header {
-  flex: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10% 5% 0 5%;
-}
-.header_box_title {
-  text-align: right;
-  border-radius: 50px 0 0 50px;
+.style_header_text {
+	height: 50px;
+  color: var(--color-gray-4);
   background: var(--color-primary);
-  padding: 12px 3.9%;
-  margin-right: 20px;
 }
-.header_box_title h1 {
-  font-size: 100%;
-  line-height: 18px;
-}
-.header_box_img {
-  border-radius: 0 50px 50px 0;
+.style_header_img {
+	height: 50px;
   background: var(--color-gray-4);
-  margin-left: -20px;
 }
-.header_box_img img {
-  width: 85%;
-  padding: 5% 0 0 5%;
+.logotipo {
+  height: 100%;
 }
-main {
-  flex: 80%;
-}
-.footer_box_btn {
-  flex: 50%;
-  display: flex;
-  flex-direction: row;
-}
-.footer_box_btn_title_edital {
-  flex: 50%;
-  background: #ffeeb2;
-}
-.footer_box_btn_img {
-  flex: 50%;
-  background: #5766ff;
-}
-.footer_box_btn_action {
-  height: 100px;
-  background: #807b6c;
-}
+
