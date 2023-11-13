@@ -6,8 +6,8 @@
   --color-base-2: #343d99;
   --color-base-3: #3140cc;
   --color-base-4: #5766ff;
-	--color-primary-1: #FFDF70;
-  --color-primary-2: #FFCE24;
+  --color-primary-1: #ffdf70;
+  --color-primary-2: #ffce24;
   --color-gray-1: #807b6c;
   --color-gray-2: #666357;
   --color-gray-4: #33312b;
@@ -29,87 +29,36 @@
     135deg,
     var(--color-base-1),
     var(--color-base-2),
-    var(--color-base-3),
-    var(--color-base-4)
+    var(--color-base-4),
+    var(--color-base-3)
   );
-  height: 100vh;
 }
 .style_header_text {
-	height: 50px;
+  height: 50px;
   color: var(--color-gray-4);
   background: var(--color-white-3);
 }
 .style_header_img {
-	height: 50px;
+  height: 50px;
   background: var(--color-gray-4);
 }
 .logotipo {
   height: 100%;
 }
-.main_text_title{
-	color: var(--color-primary-1)
+.main_text_title {
+  color: var(--color-primary-1);
 }
-.main_text_description{
-	color: var(--color-white)
-}
-/* .header_box_title {
-  text-align: right;
-  border-radius: 50px 0 0 50px;
-  background: var(--color-primary);
-  padding: 12px 3.9%;
-  margin-right: 20px;
-}
-.header_box_title h1 {
-  font-size: 100%;
-  line-height: 18px;
-}
-.header_box_img {
-  border-radius: 0 50px 50px 0;
-  background: var(--color-gray-4);
-  margin-left: -20px;
-}
-.header_box_img img {
-  width: 85%;
-  padding: 5% 0 0 5%;
-} */
-/* main {
-  flex: 80%;
-} */
-/* .footer_box_btn {
-  flex: 50%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.footer_box_btn_title_edital {
-  flex: 50%;
-  background: var(--color-gray-1);
-  text-align: center;
-  height: 30px;
-}
-.footer_box_btn_title_edital h3 {
+.main_text_description {
   color: var(--color-white);
-  font-size: 18px;
-  font-weight: 400;
 }
-.footer_box_btn_img {
-  flex: 50%;
+.footer_btn {
   background: var(--color-gray-1);
+  color: var(--color-white);
 }
-.footer_box_btn_action {
-  height: 30px;
-  background: #807b6c;
-} */
-
-/* .styleContainerInner {
-  width: 90%;
-  height: 90%;
-  margin: auto;
-  background-color: #000;
-} */
-/* header {
-  width: 100%;
-  height: 70px;
-  background-color: blue;
-} */
-
+.footer_btn_img {
+  height: 28px;
+}
+.footer_btn_action {
+  background: var(--color-gray-2);
+  color: var(--color-white);
+}
