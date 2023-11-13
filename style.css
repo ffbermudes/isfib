@@ -21,7 +21,7 @@
   font-family: var(--font-primary);
   font-size: 16px;
 }
-.container-fluid {
+body {
   background-color: var(--color-white-3);
 }
 .style_container {
@@ -61,4 +61,19 @@
 .footer_btn_action {
   background: var(--color-gray-2);
   color: var(--color-white);
+}
+@media (max-width: 767px) {
+  .teste {
+    font-size: 28px;
+  }
+}
+@media (max-width: 682px) {
+  .teste {
+    font-size: 24px;
+  }
+}
+@media (max-width: 594px) {
+  .teste {
+    font-size: 22px;
+  }
 }
