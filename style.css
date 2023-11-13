@@ -21,9 +21,15 @@
   font-family: var(--font-primary);
   font-size: 16px;
 }
+
+html {
+  height: 100vh;
+}
+
 body {
   background-color: var(--color-white-3);
 }
+
 .style_container {
   background: linear-gradient(
     135deg,
