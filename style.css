@@ -1,0 +1,79 @@
+@import './varStyles.css';
+
+.style_header_text {
+  height: 50px;
+  padding: 0;
+  color: var(--color-gray-4);
+  background: var(--color-white-3);
+}
+.style_header_img {
+  padding: 0;
+  height: 50px;
+  background: var(--color-gray-4);
+}
+.logotipo {
+  min-width: 70px;
+  width: 100%;
+}
+.main_text_title {
+  color: var(--color-primary-1);
+}
+.main_text_description {
+  color: var(--color-white);
+}
+.footer_btn {
+  background: var(--color-gray-1);
+  color: var(--color-white);
+}
+.footer_btn_img {
+  height: 28px;
+}
+.footer_btn_action {
+  background: var(--color-gray-2);
+  color: var(--color-white);
+}
+
+.divisionMain{
+  height: 33.3%;
+}
+
+.divisionSection {
+  height: 50%;
+}
+
+.img-students{
+  min-width: 100%;
+  object-fit: cover;
+}
+
+main {
+  background-image: url('img/student3.png');
+  background-repeat: no-repeat;
+  background-size: 100%; /* Ajusta o tamanho da imagem para caber completamente no contêiner */
+  background-position: center; /* Centraliza a imagem no contêiner */
+  height: 100vh; /* Define a altura do contêiner, você pode ajustar conforme necessário */
+  display: flex;
+  flex-direction: column;
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
+}
+/* .teste{
+  white-space: pre-line;
+} */
+
+@media (max-width: 767px) {
+  .teste {
+    font-size: 28px;
+  }
+}
+@media (max-width: 682px) {
+  .teste {
+    font-size: 24px;
+  }
+}
+@media (max-width: 594px) {
+  .teste {
+    font-size: 22px;
+  }
+}
