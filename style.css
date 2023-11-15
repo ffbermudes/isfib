@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800&display=swap");
+
+:root {
+  /* palette of colors */
+  --color-base-1: #2d3266;
+  --color-base-2: #343d99;
+  --color-base-3: #3140cc;
+  --color-base-4: #5766ff;
+  --color-primary-1: #ffdf70;
+  --color-primary-2: #ffce24;
+  --color-gray-1: #807b6c;
+  --color-gray-2: #666357;
+  --color-gray-4: #33312b;
+  --color-white: #fff9e5;
+  --color-white-3: #ffeeb2;
+
+  /* typography */
+  --font-primary: "Nunito Sans", sans-serif;
+}
+body {
+  background: var(--color-white-3);
+  font-family: var(--font-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 95%;
+  background: linear-gradient(
+    135deg,
+    var(--color-base-1),
+    var(--color-base-2),
+    var(--color-base-3),
+    var(--color-base-4)
+  );
+  border-radius: 10px;
+}
+.secao1 {
+  order: 2;
+  flex: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  align-items: center;
+  text-align: center;
+}
+.secao1_titulo {
+  color: var(--color-primary-1);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 22px;
+  letter-spacing: 2px;
+}
+.secao1_conteiner_descricao {
+  margin-left: -105px;
+}
+.secao1_descricao {
+  color: var(--color-white);
+  font-size: 14px;
+  line-height: 25px;
+}
+span {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-primary-1);
+}
+.secao1_img {
+  padding: 10px 0;
+}
+.secao1_img img {
+  width: 100%;
+}
+.secao2 {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 10%;
+  width: 100%;
+  margin: 0 auto;
+}
+.secao2_logotipo {
+  width: 80%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.secao2_titulo_logotipo {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 50px;
+  padding: 0 25px 0 15px;
+  text-align: end;
+  background: var(--color-white-3);
+  border-radius: 50px 0 0 50px;
+  font-size: 16px;
+}
+.secao2_logotipo_img {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  height: 50px;
+  padding: 0 5px;
+  background: var(--color-gray-4);
+  border-radius: 0 50px 50px 0;
+}
+.secao2_logotipo_img img {
+  width: 75px;
+}
+.secao1_btn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 65px;
+}
+.secao1_btn_link {
+  background: var(--color-primary-2);
+  padding: 16px 18%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--color-gray-4);
+}
+.secao1_btn_link_elementos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  background: var(--color-primary-1);
+}
+.btn_border {
+  border-radius: 0 0 10px 10px;
+}
+.secao1_btn_link_elementos img {
+  width: 25px;
+  padding-left: 15px;
+}
+
+@midia (min-width: 1280px) {
+  .container {
+    display: flex;
+    width: 100%;
+    height: 93%;
+    background: linear-gradient(
+      135deg,
+      var(--color-base-1),
+      var(--color-base-2),
+      var(--color-base-3),
+      var(--color-base-4)
+    );
+  }
+  .secao1 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    margin-left: 8%;
+  }
+  .secao1_titulo {
+    color: var(--color-primary-1);
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: 2px;
+  }
+  .secao1_descricao {
+    color: var(--color-white);
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .secao1_btn {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .secao1_btn_link {
+    background: #fff9e5;
+    padding: 16px 18%;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--color-gray-4);
+  }
+  .secao1_btn_link_elementos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+  }
+  .secao1_btn_link_elementos img {
+    width: 25px;
+    padding-left: 15px;
+  }
+  .secao2 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .secao2_logotipo {
+    width: 70%;
+    height: 15%;
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .secao2_titulo_logotipo {
+    width: 90%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 50px 0 30px;
+    text-align: end;
+    background: var(--color-white-3);
+    border-radius: 50px 0 0 50px;
+    font-size: 24px;
+  }
+  .secao2_logotipo_img {
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    background: var(--color-gray-4);
+    border-radius: 0 50px 50px 0;
+  }
+  .secao2_logotipo_img img {
+    width: 120px;
+  }
+  .secao2_img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .secao2_img img {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
