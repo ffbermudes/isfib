@@ -41,13 +41,24 @@ body {
 }
 .secao1 {
   order: 2;
-  flex: 80%;
+  flex: 90%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
+  justify-content: center;
   align-items: center;
   text-align: center;
+  /* border: solid 3px tomato; */
+}
+.secao1_btn {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  /* justify-self: start; */
+  align-self: flex-end;
+  margin-top: auto;
+  /* border: solid 3px lightgreen; */
 }
 .secao1_titulo {
   color: var(--color-primary-1);
@@ -103,6 +114,7 @@ span {
   border-radius: 50px 0 0 50px;
   font-size: 16px;
 }
+
 .secao2_logotipo_img {
   display: flex;
   align-items: center;
@@ -116,12 +128,7 @@ span {
 .secao2_logotipo_img img {
   width: 75px;
 }
-.secao1_btn {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-top: 65px;
-}
+
 .secao1_btn_link {
   background: var(--color-primary-2);
   padding: 16px 18%;
@@ -146,7 +153,7 @@ span {
   padding-left: 15px;
 }
 
-@midia (min-width: 1280px) {
+@media (min-width: 1280px) {
   .container {
     display: flex;
     width: 100%;

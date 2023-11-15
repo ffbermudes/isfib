@@ -1,0 +1,32 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	height: 100vh;
+	background-color: antiquewhite;
+	display: flex;
+	flex-direction: column;
+}
+.um{
+	height: 33.3%;
+	width: 100%;
+	background-color: blue;
+}
+
+.dois{
+	
+	height: 33.3%;
+	width: 100%;
+	background-color: red;
+}
+
+.tres {
+  height: 20%;
+  align-self: flex-end;
+  width: 100%;
+  background-color: green;
+  margin-top: auto;
+}
