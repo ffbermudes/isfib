@@ -34,7 +34,7 @@
         <img src="img/student2.png" alt="" />
       </div>
       <div class="secao1_conteiner_descricao">
-        <p class="secao1_descricao">Para qualquer <span> Estudante</span></p>
+        <p class="secao1_descricao">Para qualquer<span>Estudante</span></p>
       </div>
 
 
@@ -47,7 +47,7 @@
           <p>Confira o Edital!</p>
           <img src="img/new document_black.png" alt="" />
         </a>
-        <a href="#" class="secao1_btn_link btn_border">Inscreva-se!</a>
+        <a href="https://globo.com" class="secao1_btn_link btn_border jsanimate">Inscreva-se!</a>
       </div>
     </section>
   </main>
@@ -57,7 +57,7 @@
 
   <main data-desktop="container">
 
-    <section >
+    <section>
       <div>
         <div>
           <h1>Processo de Seleção</h1>
@@ -92,24 +92,38 @@
         </a>
         <a href="#">Inscreva-se!</a>
       </div>
-      
+
     </section>
   </main>
 
   <script defer>
     document.addEventListener('DOMContentLoaded', (e) => {
+      function anima(){
+        const buttonAsign = document.querySelector('.jsanimate')
+  
+        const intervalo = setInterval(()=>{
+          buttonAsign.dataset.animate='buttonPulse'
+          setTimeout(()=>{
+            buttonAsign.dataset.animate=''
+          }, 1000)
+        }, 4000)
+      }
+
+      if(/Mobi/i.test(navigator.userAgent))
+        anima()
+
       const desktop = document.querySelector('[data-desktop="container"]')
       const mobile = document.querySelector('.mobile')
       setInterval(() => {
         if (/Mobi/i.test(navigator.userAgent)) {
           const heightScreen = window.innerHeight + 'px'
           document.body.style.height = heightScreen
-          mobile.dataset.container='show'
-          desktop.dataset.container='none'
+          mobile.dataset.container = 'show'
+          desktop.dataset.container = 'none'
         }
-        else{
-          mobile.dataset.container='none'
-          desktop.dataset.container='show'
+        else {
+          mobile.dataset.container = 'none'
+          desktop.dataset.container = 'show'
         }
 
       }, 500)

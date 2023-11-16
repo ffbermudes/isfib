@@ -199,34 +199,27 @@ span {
   /* padding-left: 15px; */
 }
 
-@media (max-height: 515px) {
-  html {
-    height: auto;
-  }
-
+@media (max-height: 650px) {
   body {
-    height: 800px;
+    display: block;
     overflow: scroll;
-    /* overflow: inherit; */
   }
-
   .container {
-      height: 800px;
-    }
-}
-
-@keyframes fadeAndSlide {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+    height: auto;
+    height: 800px;
+    margin: 0 auto;
   }
 }
 
+@keyframes buttonPulse {
+  from {
+    transform: scale(1);
+  }
+  
+  to {
+    transform: scale(2);
+  }
+}
 
 /*
 ---------------------------------
@@ -252,9 +245,27 @@ INICIO DESKTOP
   }
 }
 
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+  }
+  
+  50%{
+    transform: scale(.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 [data-container='show'] {
   display: flex;
   animation: fadeAndSlide .6s ease-in-out forwards;
+}
+
+[data-animate='buttonPulse'] {
+  animation: buttonPulse .5s ease-in-out forwards infinite;
 }
 
 [data-container='none'] {
