@@ -27,7 +27,7 @@ body {
   overflow: hidden;
 }
 .container {
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 90%;
   height: 95%;
@@ -275,5 +275,22 @@ span {
   .secao2_img img {
     width: 100%;
     margin-bottom: 0;
+  }
+}
+
+
+[data-container = 'show'] {
+  display: flex;
+  animation: fadeAndSlide 1s ease-in-out forwards;
+}
+
+@keyframes fadeAndSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
