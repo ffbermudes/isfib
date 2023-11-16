@@ -51,9 +51,12 @@
       </div>
     </section>
   </main>
-  <script>
+  <script defer>
     document.addEventListener('DOMContentLoaded', (e) => {
-      document.querySelector('.container').dataset.container= "show"
+      const container = document.querySelector('.container')
+      const heightScreen = window.innerHeight + 'px'
+      container.dataset.container= "show"
+      document.body.style.height = heightScreen
     })
   </script>
 </body>
