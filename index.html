@@ -54,9 +54,20 @@
   <script defer>
     document.addEventListener('DOMContentLoaded', (e) => {
       const container = document.querySelector('.container')
-      const heightScreen = window.innerHeight + 'px'
-      container.dataset.container= "show"
-      document.body.style.height = heightScreen
+      setInterval(() => {
+        if (window.innerHeight < 515) {
+          document.body.style.height = '800px'
+          container.dataset.container = "show"
+        } else {
+          const container = document.querySelector('.container')
+          const heightScreen = window.innerHeight + 'px'
+          container.dataset.container = "show"
+          document.body.style.height = heightScreen
+        }
+
+      }, 200)
+
+
     })
   </script>
 </body>

@@ -171,6 +171,16 @@ span {
   /* padding-left: 15px; */
 }
 
+@media (max-height: 515px) {
+  body {
+    height: auto;
+    overflow: inherit;
+  }
+  .container {
+    overflow-y: scroll;
+  }
+}
+
 @media (min-width: 1280px) {
   .container {
     display: flex;
@@ -280,7 +290,7 @@ span {
 
 [data-container = 'show'] {
   display: flex;
-  animation: fadeAndSlide 1s ease-in-out forwards;
+  animation: fadeAndSlide .6s ease-in-out forwards;
 }
 
 @keyframes fadeAndSlide {
