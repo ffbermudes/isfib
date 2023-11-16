@@ -226,11 +226,37 @@ span {
 INICIO DESKTOP
 ---------------------------------
 */
-[data-desktop="container"] {
-  flex-direction: row;
-  border: solid 3px tomato;
-  height: 80vh;
+[data-desktop = "container"] {
+  height: 100vh;
+  animation: fadeAndSlide forwards .8s ease-in-out;
+  display: flex;
+  align-items: center;
 }
+[data-desktop = "containerDesktop"] {
+  height:90%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+[data-desktop="logo"] {
+  grid-column: 6/8;
+  border:solid 1px red;
+}
+
+[data-desktop="brasilMap"] {
+  grid-column: 5/13;
+  border: solid #ffce24 2px;
+}
+
+[data-desktop="titleAndBtns"] {
+  grid-column: 1/5;
+  grid-row: 2/3;
+  border: solid 2px black;
+}
+
+/* [data-desktop="section1"] {
+} */
 
 
 @keyframes fadeAndSlide {
@@ -259,15 +285,15 @@ INICIO DESKTOP
   }
 }
 
-[data-container='show'] {
+[data-container ='show'] {
   display: flex;
   animation: fadeAndSlide .6s ease-in-out forwards;
 }
 
-[data-animate='buttonPulse'] {
+[data-animate ='buttonPulse'] {
   animation: buttonPulse .5s ease-in-out forwards infinite;
 }
 
-[data-container='none'] {
+[data-container = 'none'] {
   display: none;
 }

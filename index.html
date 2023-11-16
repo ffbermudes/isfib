@@ -52,48 +52,46 @@
     </section>
   </main>
 
-
-
-
   <main data-desktop="container">
+    <div data-desktop="containerDesktop">
+      
+        <section data-desktop="logo">
+          <div>
+            <div>
+              <h1>Processo de Seleção</h1>
+            </div>
+            <div>
+              <img src="img/logotipo.png" alt="" />
+            </div>
+          </div>
+          <!-- <div class="secao2_img"><img src="img/student.png" alt="" /></div> -->
+        </section>
 
-    <section>
-      <div>
-        <div>
-          <h1>Processo de Seleção</h1>
-        </div>
-        <div>
-          <img src="img/logotipo.png" alt="" />
-        </div>
-      </div>
-      <!-- <div class="secao2_img"><img src="img/student.png" alt="" /></div> -->
-    </section>
+        <section data-desktop="titleAndBtns">
+          <div>
+            <h2>Inscrições</h2>
+            <h2>Abertas</h2>
+            <p>de 17 à 27 de novembro.</p>
+          </div>
 
-    <section>
-      <div>
-        <h2>Inscrições</h2>
-        <h2>Abertas</h2>
-        <p>de 17 à 27 de novembro.</p>
-      </div>
-      <div>
-        <img src="img/student2.png" alt="" />
-      </div>
-      <div>
-        <p>Para qualquer <span> Estudante</span></p>
-      </div>
-    </section>
+          <div>
+            <a href="#">
+              <p>Confira o Edital!</p>
+              <img src="img/new document_black.png" alt="" />
+            </a>
+            <a href="#">Inscreva-se!</a>
+          </div>
+          
+        </section>
 
-    <section>
+        <section data-desktop="brasilMap">
+          <img src="img/student2.png" alt="" />
+          <div>
+            <p>Para qualquer <span> Estudante</span></p>
+          </div>
+        </section>
 
-      <div>
-        <a href="#">
-          <p>Confira o Edital!</p>
-          <img src="img/new document_black.png" alt="" />
-        </a>
-        <a href="#">Inscreva-se!</a>
-      </div>
-
-    </section>
+    </div>
   </main>
 
   <script defer>
@@ -124,6 +122,9 @@
         else {
           mobile.dataset.container = 'none'
           desktop.dataset.container = 'show'
+          desktop.style.display = 'flex'
+          desktop.style.justifyContent = 'center'
+
         }
 
       }, 500)
