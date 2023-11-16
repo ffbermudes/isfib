@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <main class="container">
+  <main class="container mobile">
 
     <section class="secao2">
       <div class="secao2_logotipo">
@@ -51,22 +51,68 @@
       </div>
     </section>
   </main>
+
+
+
+
+  <main data-desktop="container">
+
+    <section >
+      <div>
+        <div>
+          <h1>Processo de Seleção</h1>
+        </div>
+        <div>
+          <img src="img/logotipo.png" alt="" />
+        </div>
+      </div>
+      <!-- <div class="secao2_img"><img src="img/student.png" alt="" /></div> -->
+    </section>
+
+    <section>
+      <div>
+        <h2>Inscrições</h2>
+        <h2>Abertas</h2>
+        <p>de 17 à 27 de novembro.</p>
+      </div>
+      <div>
+        <img src="img/student2.png" alt="" />
+      </div>
+      <div>
+        <p>Para qualquer <span> Estudante</span></p>
+      </div>
+    </section>
+
+    <section>
+
+      <div>
+        <a href="#">
+          <p>Confira o Edital!</p>
+          <img src="img/new document_black.png" alt="" />
+        </a>
+        <a href="#">Inscreva-se!</a>
+      </div>
+      
+    </section>
+  </main>
+
   <script defer>
     document.addEventListener('DOMContentLoaded', (e) => {
-      const container = document.querySelector('.container')
+      const desktop = document.querySelector('[data-desktop="container"]')
+      const mobile = document.querySelector('.mobile')
       setInterval(() => {
-        if (window.innerHeight < 515) {
-          document.body.style.height = '800px'
-          container.dataset.container = "show"
-        } else {
-          const container = document.querySelector('.container')
+        if (/Mobi/i.test(navigator.userAgent)) {
           const heightScreen = window.innerHeight + 'px'
-          container.dataset.container = "show"
           document.body.style.height = heightScreen
+          mobile.dataset.container='show'
+          desktop.dataset.container='none'
+        }
+        else{
+          mobile.dataset.container='none'
+          desktop.dataset.container='show'
         }
 
-      }, 200)
-
+      }, 500)
 
     })
   </script>

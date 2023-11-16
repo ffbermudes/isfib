@@ -17,6 +17,21 @@
   /* typography */
   --font-primary: "Nunito Sans", sans-serif;
 }
+
+.mobile {
+  display: none;
+}
+
+[data-desktop = "container"] {
+  display: none;
+}
+
+/*
+---------------------------------
+INICIO MOBILE
+---------------------------------
+*/
+
 body {
   background: var(--color-white-3);
   font-family: var(--font-primary);
@@ -25,21 +40,20 @@ body {
   align-items: center;
   overflow: hidden;
 }
+
 .container {
-  display: none;
   flex-direction: column;
   width: 90%;
   height: 95%;
-  background: linear-gradient(
-    135deg,
-    var(--color-base-1),
-    var(--color-base-2),
-    var(--color-base-3),
-    var(--color-base-4)
-  );
+  background: linear-gradient(135deg,
+      var(--color-base-1),
+      var(--color-base-2),
+      var(--color-base-3),
+      var(--color-base-4));
   border-radius: 10px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
+
 .secao1 {
   flex: 60%;
   width: 100%;
@@ -50,6 +64,7 @@ body {
   text-align: center;
   /* border: solid 3px tomato; */
 }
+
 .secao1_btn {
   width: 100%;
   height: 60%;
@@ -59,10 +74,10 @@ body {
   display: flex;
   justify-content: flex-end;
   /* margin-top: auto;
-  margin-bottom: auto; */
+    margin-bottom: auto; */
 }
 
-.first_title{
+.first_title {
   margin-bottom: 2em;
 }
 
@@ -73,25 +88,31 @@ body {
   line-height: 22px;
   letter-spacing: 2px;
 }
+
 .secao1_conteiner_descricao {
   margin-left: -105px;
 }
+
 .secao1_descricao {
   color: var(--color-white);
   font-size: 14px;
   line-height: 25px;
 }
+
 span {
   font-size: 18px;
   font-weight: bold;
   color: var(--color-primary-1);
 }
+
 .secao1_img {
   padding: 10px 0;
 }
+
 .secao1_img img {
   width: 100%;
 }
+
 .secao2 {
   display: flex;
   flex-direction: column;
@@ -101,6 +122,7 @@ span {
   width: 100%;
   margin: 0 auto;
 }
+
 .secao2_logotipo {
   width: 90%;
   height: auto;
@@ -108,6 +130,7 @@ span {
   justify-content: center;
   align-items: center;
 }
+
 .secao2_titulo_logotipo {
   display: flex;
   align-items: center;
@@ -131,6 +154,7 @@ span {
   border-radius: 0 50px 50px 0;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
+
 .secao2_logotipo_img img {
   height: 42px;
 }
@@ -139,6 +163,7 @@ span {
   flex: 15%;
   display: flex;
 }
+
 .secao1_btn_link {
   background: var(--color-primary-2);
   text-align: center;
@@ -147,6 +172,7 @@ span {
   text-decoration: none;
   color: var(--color-gray-4);
 }
+
 .secao1_btn_link {
   height: 50%;
   min-height: 30px;
@@ -154,6 +180,7 @@ span {
   align-items: center;
   justify-content: center;
 }
+
 .secao1_btn_link_elementos {
   display: flex;
   align-items: center;
@@ -165,6 +192,7 @@ span {
 .btn_border {
   border-radius: 0 0 10px 10px;
 }
+
 .secao1_btn_link_elementos img {
   height: 50%;
   margin-left: 2em;
@@ -172,125 +200,19 @@ span {
 }
 
 @media (max-height: 515px) {
-  body {
+  html {
     height: auto;
-    overflow: inherit;
   }
+
+  body {
+    height: 800px;
+    overflow: scroll;
+    /* overflow: inherit; */
+  }
+
   .container {
-    overflow-y: scroll;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    display: flex;
-    width: 100%;
-    height: 93%;
-    background: linear-gradient(
-      135deg,
-      var(--color-base-1),
-      var(--color-base-2),
-      var(--color-base-3),
-      var(--color-base-4)
-    );
-  }
-  .secao1 {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: start;
-    margin-left: 8%;
-  }
-  .secao1_titulo {
-    color: var(--color-primary-1);
-    font-size: 32px;
-    font-weight: 800;
-    line-height: 40px;
-    letter-spacing: 2px;
-  }
-  .secao1_descricao {
-    color: var(--color-white);
-    font-size: 18px;
-    line-height: 25px;
-  }
-  .secao1_btn {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-  }
-  .secao1_btn_link {
-    background: #fff9e5;
-    padding: 16px 18%;
-    margin-bottom: 30px;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 800;
-    text-decoration: none;
-    color: var(--color-gray-4);
-  }
-  .secao1_btn_link_elementos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 400;
-  }
-  .secao1_btn_link_elementos img {
-    width: 25px;
-    padding-left: 15px;
-  }
-  .secao2 {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .secao2_logotipo {
-    width: 70%;
-    height: 15%;
-    padding-top: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .secao2_titulo_logotipo {
-    width: 90%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    padding: 0 50px 0 30px;
-    text-align: end;
-    background: var(--color-white-3);
-    border-radius: 50px 0 0 50px;
-    font-size: 24px;
-  }
-  .secao2_logotipo_img {
-    width: 100%;
-    height: 60px;
-    padding: 0 20px;
-    background: var(--color-gray-4);
-    border-radius: 0 50px 50px 0;
-  }
-  .secao2_logotipo_img img {
-    width: 120px;
-  }
-  .secao2_img {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .secao2_img img {
-    width: 100%;
-    margin-bottom: 0;
-  }
-}
-
-
-[data-container = 'show'] {
-  display: flex;
-  animation: fadeAndSlide .6s ease-in-out forwards;
+      height: 800px;
+    }
 }
 
 @keyframes fadeAndSlide {
@@ -298,8 +220,43 @@ span {
     opacity: 0;
     transform: translateX(-100%);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+
+/*
+---------------------------------
+INICIO DESKTOP
+---------------------------------
+*/
+[data-desktop="container"] {
+  flex-direction: row;
+  border: solid 3px tomato;
+  height: 80vh;
+}
+
+
+@keyframes fadeAndSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+[data-container='show'] {
+  display: flex;
+  animation: fadeAndSlide .6s ease-in-out forwards;
+}
+
+[data-container='none'] {
+  display: none;
 }
