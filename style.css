@@ -162,6 +162,8 @@ span {
 .secao3 {
   flex: 15%;
   display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .secao1_btn_link {
