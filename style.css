@@ -229,6 +229,7 @@ INICIO DESKTOP
 */
 [data-desktop = "container"] {
   height: 100vh;
+  width: 100%;
   animation: fadeAndSlide forwards .8s ease-in-out;
   display: flex;
   align-items: center;
@@ -238,6 +239,7 @@ INICIO DESKTOP
   width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
   background: linear-gradient(135deg,
       var(--color-base-1),
       var(--color-base-2),
@@ -252,7 +254,8 @@ INICIO PILULA LOGITPO
 */
 
 [data-desktop="logo"] {
-  grid-column: 6/8;
+  grid-column: 6/9;
+  grid-row: 1/4;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -307,26 +310,35 @@ INICIO FOTO MASCARA BRASIL
 
 [data-desktop="brasilMap"] {
   grid-column: 5/13;
+  grid-row: 4/13;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-[data-desktop="brasilMap"] img {
-  width: 70%;
-  z-index: 1;
-  transform: translateX(-30%);
-
-}
 [data-desktop="brasilMap"] div {
-  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: left;
-  z-index: 2;
-  transform: translateX(20%) translateY(70%);
 }
+[data-desktop="brasilMap"] div:first-child {
+  width: 30%;
+  transform: translate(70%, 60%);
+  z-index: 2;
+}
+
+[data-desktop="brasilMap"] div:last-child {
+  width: 100%;
+  transform: translate(-10%);
+  z-index: 1;
+}
+
+[data-desktop="brasilMap"] div:last-child img {
+  transform: scale(1.2);
+  overflow: hidden;
+}
+
 [data-desktop="brasilMap"] > div > p {
   font-family: var(--font-primary);
   color: var(--color-white);
@@ -340,8 +352,8 @@ INICIO FOTO MASCARA BRASIL
 }
 
 [data-desktop="titleAndBtns"] {
-  grid-column: 1/5;
-  grid-row: 2/3;
+  grid-column: 2/5;
+  grid-row: 4/11;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -359,7 +371,7 @@ INICIO FOTO MASCARA BRASIL
 }
 
 [data-desktop="titleAndBtns"] div:first-child {
-  justify-content: end;
+  justify-content: center;
 }
 
 [data-desktop="titleAndBtns"] div h2 {
@@ -375,13 +387,12 @@ INICIO FOTO MASCARA BRASIL
   color: var(--color-white);
   font-family: var(--font-primary);
   font-size: 20px;
-  margin-top: 2em;
+  margin-top: 1em;
   text-align: left;
 }
 
 [data-desktop = "botoes"] a {
   background-color: var(--color-primary-1);
-  margin-bottom: 2em;
   border-radius: 5px;
   padding: 10px 5px;
   text-decoration: none;
@@ -391,6 +402,7 @@ INICIO FOTO MASCARA BRASIL
   font-family: var(--font-primary);
   font-weight: bolder;
   color: var(--color-gray-2);
+  margin-bottom: 1em;
 }
 [data-desktop = "botoes"] a:first-child {
   display: flex;
@@ -408,6 +420,34 @@ INICIO FOTO MASCARA BRASIL
 }
 [data-desktop = "botoes"] a:first-child img {
   height: 28px;
+}
+
+@media (max-width: 1110px) {
+  [data-desktop="pilula"] {
+    width: 100%;
+  }
+
+  [data-desktop="pilula-title"] {
+    padding: 0 20px 0 20px;
+  }
+
+  [data-desktop="titleAndBtns"] {
+    grid-column: 1/6;
+    grid-row: 4/13;
+  }
+}
+
+[data-container ='show'] {
+  display: flex;
+  animation: fadeAndSlide .6s ease-in-out forwards;
+}
+
+[data-animate ='buttonPulse'] {
+  animation: buttonPulse .5s ease-in-out forwards infinite;
+}
+
+[data-container = 'none'] {
+  display: none;
 }
 
 @keyframes fadeAndSlide {
@@ -434,17 +474,4 @@ INICIO FOTO MASCARA BRASIL
   100% {
     transform: scale(1);
   }
-}
-
-[data-container ='show'] {
-  display: flex;
-  animation: fadeAndSlide .6s ease-in-out forwards;
-}
-
-[data-animate ='buttonPulse'] {
-  animation: buttonPulse .5s ease-in-out forwards infinite;
-}
-
-[data-container = 'none'] {
-  display: none;
 }
