@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="saiba_mais.css" />
-    <title>ISFIB - Processo Seletivo</title>
+    <title>ISFIB - Saiba Mais</title>
   </head>
   <body>
     <div class="container">
@@ -114,7 +114,7 @@
         </p>
         <p class="footer">Toda a equipe do ISFIB lhe deseja uma boa sorte!</p>
         <div class="button">
-          <a href="#">Inscreva-se!</a>
+          <a href="https://forms.gle/7DTXApc9s7tF6EBUA" class="botaoDeInscricao">Inscreva-se!</a>
         </div>
       </section>
     </div>
@@ -125,5 +125,34 @@
         .dataset.container = "show"
       })
     </script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-GD7CYQ1TWV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+	
+			gtag('config', 'G-GD7CYQ1TWV');
+		</script>
+		<script>
+			document.querySelector(".botaoDeInscricao").addEventListener('click', function () {
+				gtag('event', 'botaoDeInscricaoSaibaMais')
+			})
+		</script>
+		<script>
+			setTimeout(() => {
+				gtag('event', 'TempoDeLeitura1Min')
+
+			}, 60000)
+			setTimeout(() => {
+				gtag('event', 'TempoDeLeitura1.3Min')
+
+			}, 90000)
+						setTimeout(() => {
+				gtag('event', 'TempoDeLeitura2Min')
+
+			}, 120000)
+			
+		</script>
   </body>
 </html>

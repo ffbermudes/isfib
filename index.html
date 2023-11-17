@@ -48,7 +48,7 @@
           <p>Saiba mais</p>
           <img src="img/new document_black.png" alt="" />
         </a>
-        <a href="https://forms.gle/7DTXApc9s7tF6EBUA" class="secao1_btn_link btn_border jsanimate">Inscreva-se!</a>
+        <a href="https://forms.gle/7DTXApc9s7tF6EBUA" class="secao1_btn_link btn_border jsanimate botaoDeInscricao">Inscreva-se!</a>
       </div>
     </section>
   </main>
@@ -80,7 +80,7 @@
             <p>Saiba mais!</p>
             <img src="img/new document_black.png" alt="" />
           </a>
-          <a href="https://forms.gle/7DTXApc9s7tF6EBUA">Inscreva-se!</a>
+          <a href="https://forms.gle/7DTXApc9s7tF6EBUA" class="botaoDeInscricao">Inscreva-se!</a>
         </div>
 
       </section>
@@ -145,6 +145,20 @@ e níveis
 
     })
   </script>
+	<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD7CYQ1TWV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GD7CYQ1TWV');
+  </script>
+	<script>
+		document.querySelector(".botaoDeInscricao").addEventListener('click', function () {
+			gtag('event', 'botaoDeInscricao')
+		})
+	</script>
 </body>
 
 </html>
