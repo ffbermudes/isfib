@@ -307,27 +307,32 @@ INICIO FOTO MASCARA BRASIL
 
 [data-desktop="brasilMap"] {
   grid-column: 5/13;
-  border: solid lightcoral 5px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 [data-desktop="brasilMap"] img {
-  border: solid 3px green;
-  
-  width: 50%;
+  width: 70%;
+  z-index: 1;
+  transform: translateX(-30%);
+
 }
 [data-desktop="brasilMap"] div {
   width: 50%;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  z-index: 2;
+  transform: translateX(20%) translateY(70%);
 }
-[data-desktop="brasilMap"] > div > p{
+[data-desktop="brasilMap"] > div > p {
   font-family: var(--font-primary);
   color: var(--color-white);
   font-size: 20px;
   white-space: pre;
-  height: 30%;
+  height: 100%;
 }
 [data-desktop="brasilMap"] > div > p > span {
   font-family: var(--font-primary);
