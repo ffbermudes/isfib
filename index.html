@@ -25,6 +25,7 @@
     </section>
 
     <section class="secao1">
+
       <div class="first_title">
         <h2 class="secao1_titulo">Inscrições</h2>
         <h2 class="secao1_titulo">Abertas</h2>
@@ -34,11 +35,11 @@
         <img src="img/student2.png" alt="" />
       </div>
       <div class="secao1_conteiner_descricao">
-        <p class="secao1_descricao">Para qualquer<span>Estudante</span></p>
+        <p class="secao1_descricao">Para qualquer<span> Estudante</span></p>
       </div>
 
-
     </section>
+
     <section class="secao3">
 
       <div class="secao1_btn">
@@ -54,76 +55,90 @@
 
   <main data-desktop="container">
     <div data-desktop="containerDesktop">
-      
-        <section data-desktop="logo">
-          <div>
-            <div>
-              <h1>Processo de Seleção</h1>
-            </div>
-            <div>
-              <img src="img/logotipo.png" alt="" />
-            </div>
-          </div>
-          <!-- <div class="secao2_img"><img src="img/student.png" alt="" /></div> -->
-        </section>
 
-        <section data-desktop="titleAndBtns">
-          <div>
-            <h2>Inscrições</h2>
-            <h2>Abertas</h2>
-            <p>de 17 à 27 de novembro.</p>
+      <section data-desktop="logo">
+        <div data-desktop="pilula">
+          <div data-desktop="pilula-title">
+            <h1>Processo de Seleção</h1>
           </div>
+          <div data-desktop="pilula-logo">
+            <img src="img/logotipo.png" alt="" />
+          </div>
+        </div>
+        <!-- <div class="secao2_img"><img src="img/student.png" alt="" /></div> -->
+      </section>
 
-          <div>
-            <a href="#">
-              <p>Confira o Edital!</p>
-              <img src="img/new document_black.png" alt="" />
-            </a>
-            <a href="#">Inscreva-se!</a>
-          </div>
-          
-        </section>
+      <section data-desktop="titleAndBtns">
+        <div>
+          <h2>Inscrições</h2>
+          <h2>Abertas</h2>
+          <p>de 17 à 27 de novembro.</p>
+        </div>
 
-        <section data-desktop="brasilMap">
-          <img src="img/student2.png" alt="" />
-          <div>
-            <p>Para qualquer <span> Estudante</span></p>
-          </div>
-        </section>
+        <div data-desktop = "botoes">
+          <a href="#">
+            <p>Confira o Edital!</p>
+            <img src="img/new document_black.png" alt="" />
+          </a>
+          <a href="#">Inscreva-se!</a>
+        </div>
+
+      </section>
+
+      <section data-desktop="brasilMap">
+        <div>
+          <p>
+            <span>Estudantes</span>
+            de todas as áreas
+            e níveis
+          </p>
+        </div>
+        <img src="img/student2.png" alt="" />
+      </section>
 
     </div>
   </main>
 
   <script defer>
     document.addEventListener('DOMContentLoaded', (e) => {
-      function anima(){
+      function anima() {
         const buttonAsign = document.querySelector('.jsanimate')
-  
-        const intervalo = setInterval(()=>{
-          buttonAsign.dataset.animate='buttonPulse'
-          setTimeout(()=>{
-            buttonAsign.dataset.animate=''
+
+        const intervalo = setInterval(() => {
+          buttonAsign.dataset.animate = 'buttonPulse'
+          setTimeout(() => {
+            buttonAsign.dataset.animate = ''
           }, 1000)
         }, 4000)
       }
 
-      if(/Mobi/i.test(navigator.userAgent))
+      if (/Mobi/i.test(navigator.userAgent))
         anima()
 
       const desktop = document.querySelector('[data-desktop="container"]')
       const mobile = document.querySelector('.mobile')
       setInterval(() => {
         if (/Mobi/i.test(navigator.userAgent)) {
+          console.log('tela de celular')
           const heightScreen = window.innerHeight + 'px'
           document.body.style.height = heightScreen
           mobile.dataset.container = 'show'
           desktop.dataset.container = 'none'
+
+          document
+            .querySelector('[data-desktop="containerDesktop"]')
+            .style.display = 'none'
         }
         else {
+          console.log('tela de computador')
           mobile.dataset.container = 'none'
           desktop.dataset.container = 'show'
           desktop.style.display = 'flex'
           desktop.style.justifyContent = 'center'
+
+          document
+            .querySelector('[data-desktop="containerDesktop"]')
+            .style.display = 'grid'
 
         }
 

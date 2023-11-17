@@ -207,6 +207,7 @@ span {
   .container {
     height: auto;
     height: 800px;
+    border-radius: 0 0 10px 10px;
     margin: 0 auto;
   }
 }
@@ -237,27 +238,172 @@ INICIO DESKTOP
   width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  background: linear-gradient(135deg,
+      var(--color-base-1),
+      var(--color-base-2),
+      var(--color-base-3),
+      var(--color-base-4));
 }
+
+/*
+---------------------------------
+INICIO PILULA LOGITPO
+---------------------------------
+*/
 
 [data-desktop="logo"] {
   grid-column: 6/8;
-  border:solid 1px red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 10%;
+  width: 100%;
+  margin: 0 auto;
 }
+
+[data-desktop="pilula"]{
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-desktop="pilula-title"] {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  height: 62px;
+  /* min-height: 42px; */
+  padding: 0 45px 0 45px;
+  text-align: end;
+  background: var(--color-white-3);
+  border-radius: 50px 0 0 50px;
+  font-size: 16px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+[data-desktop="pilula-logo"]{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding: 0 35px 0 35px;
+  background: var(--color-gray-4);
+  border-radius: 0 50px 50px 0;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+[data-desktop="pilula-logo"] img {
+  height: 62px;
+}
+
+/*
+---------------------------------
+INICIO FOTO MASCARA BRASIL
+---------------------------------
+*/
 
 [data-desktop="brasilMap"] {
   grid-column: 5/13;
-  border: solid #ffce24 2px;
+  border: solid lightcoral 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-desktop="brasilMap"] img {
+  border: solid 3px green;
+  
+  width: 50%;
+}
+[data-desktop="brasilMap"] div {
+  width: 50%;
+
+}
+[data-desktop="brasilMap"] > div > p{
+  font-family: var(--font-primary);
+  color: var(--color-white);
+  font-size: 20px;
+  white-space: pre;
+  height: 30%;
+}
+[data-desktop="brasilMap"] > div > p > span {
+  font-family: var(--font-primary);
+  font-size: 38px;
 }
 
 [data-desktop="titleAndBtns"] {
   grid-column: 1/5;
   grid-row: 2/3;
-  border: solid 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
 }
 
-/* [data-desktop="section1"] {
-} */
+[data-desktop="titleAndBtns"] div {
+  height: 50%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
+[data-desktop="titleAndBtns"] div:first-child {
+  justify-content: end;
+}
+
+[data-desktop="titleAndBtns"] div h2 {
+  width: 100%;
+  color: var(--color-primary-1);
+  font-family: var(--font-primary);
+  font-size: 38px;
+  text-align: left;
+}
+
+[data-desktop="titleAndBtns"] > div > p {
+  width: 100%;
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: 20px;
+  margin-top: 2em;
+  text-align: left;
+}
+
+[data-desktop = "botoes"] a {
+  background-color: var(--color-primary-1);
+  margin-bottom: 2em;
+  border-radius: 5px;
+  padding: 10px 5px;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: var(--font-primary);
+  font-weight: bolder;
+  color: var(--color-gray-2);
+}
+[data-desktop = "botoes"] a:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 20px;
+}
+[data-desktop = "botoes"] a:nth-child(2) {
+  font-size: 38px;
+  font-weight: 700;
+}
+[data-desktop = "botoes"] a:first-child p {
+  margin-right: 1em;
+}
+[data-desktop = "botoes"] a:first-child img {
+  height: 28px;
+}
 
 @keyframes fadeAndSlide {
   0% {
