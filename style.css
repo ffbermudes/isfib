@@ -201,7 +201,7 @@ span {
   /* padding-left: 15px; */
 }
 
-@media (max-height: 650px) {
+@media (max-height: 450px) {
   body {
     display: block;
     overflow: scroll;
