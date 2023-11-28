@@ -2,10 +2,10 @@
 
 :root {
   /* palette of colors */
-  --color-base-1: #2d3266;
-  --color-base-2: #343d99;
+  --color-base-1: #2e3366;
+  --color-base-2: #333c99;
   --color-base-3: #3140cc;
-  --color-base-4: #5766ff;
+  --color-base-4: rgb(87, 101, 255);
   --color-primary-1: #ffdf70;
   --color-primary-2: #ffce24;
   --color-gray-1: #807b6c;
@@ -13,6 +13,14 @@
   --color-gray-4: #33312b;
   --color-white: #fff9e5;
   --color-white-3: #ffeeb2;
+
+  --color-fundo: linear-gradient(
+    135deg,
+    var(--color-base-1),
+    var(--color-base-2),
+    var(--color-base-3),
+    var(--color-base-4)
+  );
 
   /* typography */
   --font-primary: "Nunito Sans", sans-serif;
@@ -22,7 +30,7 @@
   display: none;
 }
 
-[data-desktop = "container"] {
+[data-desktop="container"] {
   display: none;
 }
 
@@ -42,14 +50,18 @@ body {
 }
 
 .container {
+  background-image: url(img/1\ 6.png);
+  background-color: rgba(87, 101, 255, 0.5);
   flex-direction: column;
   width: 90%;
   height: 95%;
-  background: linear-gradient(135deg,
-      var(--color-base-1),
-      var(--color-base-2),
-      var(--color-base-3),
-      var(--color-base-4));
+  /* background: linear-gradient(
+    135deg,
+    var(--color-base-1),
+    var(--color-base-2),
+    var(--color-base-3),
+    var(--color-base-4)
+  ); */
   border-radius: 10px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
@@ -59,7 +71,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   text-align: center;
   /* border: solid 3px tomato; */
@@ -90,7 +102,7 @@ body {
 }
 
 .secao1_conteiner_descricao {
-  margin-left: -105px;
+  /* margin-left: -105px; */
 }
 
 .secao1_descricao {
@@ -98,11 +110,20 @@ body {
   font-size: 14px;
   line-height: 25px;
 }
+.espaco {
+  margin-top: 8em;
+}
 
 span {
   font-size: 18px;
   font-weight: bold;
   color: var(--color-primary-1);
+}
+.titulo__redes__sociais {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-primary-1);
+  margin-top: 2em;
 }
 
 .secao1_img {
@@ -149,10 +170,10 @@ span {
   align-items: center;
   width: 100%;
   justify-content: center;
-  padding: 0 5px;
+  /* padding: 0 5px;
   background: var(--color-gray-4);
   border-radius: 0 50px 50px 0;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4); */
 }
 
 .secao2_logotipo_img img {
@@ -218,7 +239,7 @@ span {
   from {
     transform: scale(1);
   }
-  
+
   to {
     transform: scale(2);
   }
@@ -229,24 +250,26 @@ span {
 INICIO DESKTOP
 ---------------------------------
 */
-[data-desktop = "container"] {
+[data-desktop="container"] {
   height: 100vh;
   width: 100%;
-  animation: fadeAndSlide forwards .8s ease-in-out;
+  animation: fadeAndSlide forwards 0.8s ease-in-out;
   display: flex;
   align-items: center;
 }
-[data-desktop = "containerDesktop"] {
-  height:90%;
+[data-desktop="containerDesktop"] {
+  height: 90%;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
-  background: linear-gradient(135deg,
-      var(--color-base-1),
-      var(--color-base-2),
-      var(--color-base-3),
-      var(--color-base-4));
+  background: linear-gradient(
+    135deg,
+    var(--color-base-1),
+    var(--color-base-2),
+    var(--color-base-3),
+    var(--color-base-4)
+  );
 }
 
 /*
@@ -267,7 +290,7 @@ INICIO PILULA LOGITPO
   margin: 0 auto;
 }
 
-[data-desktop="pilula"]{
+[data-desktop="pilula"] {
   width: 90%;
   height: auto;
   display: flex;
@@ -289,7 +312,7 @@ INICIO PILULA LOGITPO
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
-[data-desktop="pilula-logo"]{
+[data-desktop="pilula-logo"] {
   display: flex;
   align-items: center;
   width: 100%;
@@ -393,7 +416,7 @@ INICIO FOTO MASCARA BRASIL
   text-align: left;
 }
 
-[data-desktop = "botoes"] a {
+[data-desktop="botoes"] a {
   background-color: var(--color-primary-1);
   border-radius: 5px;
   padding: 10px 5px;
@@ -406,21 +429,21 @@ INICIO FOTO MASCARA BRASIL
   color: var(--color-gray-2);
   margin-bottom: 1em;
 }
-[data-desktop = "botoes"] a:first-child {
+[data-desktop="botoes"] a:first-child {
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: normal;
   font-size: 20px;
 }
-[data-desktop = "botoes"] a:nth-child(2) {
+[data-desktop="botoes"] a:nth-child(2) {
   font-size: 38px;
   font-weight: 700;
 }
-[data-desktop = "botoes"] a:first-child p {
+[data-desktop="botoes"] a:first-child p {
   margin-right: 1em;
 }
-[data-desktop = "botoes"] a:first-child img {
+[data-desktop="botoes"] a:first-child img {
   height: 28px;
 }
 
@@ -439,16 +462,16 @@ INICIO FOTO MASCARA BRASIL
   }
 }
 
-[data-container ='show'] {
+[data-container="show"] {
   display: flex;
-  animation: fadeAndSlide .6s ease-in-out forwards;
+  animation: fadeAndSlide 0.6s ease-in-out forwards;
 }
 
-[data-animate ='buttonPulse'] {
-  animation: buttonPulse .5s ease-in-out forwards infinite;
+[data-animate="buttonPulse"] {
+  animation: buttonPulse 0.5s ease-in-out forwards infinite;
 }
 
-[data-container = 'none'] {
+[data-container="none"] {
   display: none;
 }
 
@@ -468,9 +491,9 @@ INICIO FOTO MASCARA BRASIL
   0% {
     transform: scale(1);
   }
-  
-  50%{
-    transform: scale(.9);
+
+  50% {
+    transform: scale(0.9);
   }
 
   100% {
